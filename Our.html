@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>This is Our</title>
+    <style>
+        form {
+            float: right;
+        }
+
+        name {
+            color: blue;
+        }
+
+        time {
+            color: blue
+        }
+
+        message {
+            color: black
+        }
+    </style>
+</head>
+<form action=index method="post">
+    <div>
+        <label for="name">昵称:</label>
+        <input type="text" id="name" name="senter">
+    </div>
+    <div>
+        <label for="message">消息:</label>
+        <input type="text" id="message" name="message">
+    </div>
+    <div class="button">
+        <button type="submit">发送消息</button>
+    </div>
+</form>
+<script type="text/javascript">
+    var now = new Date();
+    let name = document.getElementById("name").value;
+    let year = now.getFullYear();
+    let month = now.getMonth() + 1;
+    let date = now.getDate();
+    let hour = now.getHours();
+    let minu = now.getMinutes();
+    let sec = now.getSeconds();
+    let message = document.getElementById("message").value;
+    document.write(name, " ", year, ".", month, ".", date, " ", hour, ":", minu, ":", sec);
+    document.write("\r ", message);
+</script>
+</body>
+
+</html>
